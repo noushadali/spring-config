@@ -3,6 +3,8 @@ Demo project showing how to bootstrap a Spring + MVC + JPA project using class-b
 
 Project still uses a web.xml file. This can be replaced by a class which implements org.springframework.web.WebApplicationInitializer.
 
+See http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc-servlet
+
 ## Technology stack:
 
 ##### Spring:
