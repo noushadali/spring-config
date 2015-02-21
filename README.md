@@ -14,9 +14,12 @@ See http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsin
 * Spring Transaction
 * Spring Test
 
-##### Database Persistence:
+##### ORM / Persistence:
 * Hibernate
 * Hibernate JPA
+* Hibernate JPA Metamodel generation
+
+##### Database:
 * PostgreSQL
 
 ##### Logging:
