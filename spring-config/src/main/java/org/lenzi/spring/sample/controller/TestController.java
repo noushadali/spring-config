@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/test")
 public class TestController {
 
-	private Logger logger = LoggerFactory.getLogger(TestController.class);
+	//private Logger logger = LoggerFactory.getLogger(TestController.class);
 	
     @Autowired
     private ManagedProperties appProps;
@@ -32,8 +32,8 @@ public class TestController {
     @Autowired
     PersonService personService;
     
-    //@InjectLogger
-    //Logger logger;
+    @InjectLogger
+    Logger logger;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printHello(ModelMap model) {

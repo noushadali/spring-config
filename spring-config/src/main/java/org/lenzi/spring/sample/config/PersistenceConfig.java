@@ -6,6 +6,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.lenzi.spring.sample.properties.ManagedProperties;
+import org.lenzi.spring.sample.stereotype.InjectLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class PersistenceConfig {
 
-	private Logger logger = LoggerFactory.getLogger(PersistenceConfig.class.getName());
+	//private Logger logger = LoggerFactory.getLogger(PersistenceConfig.class.getName());
 	
     @Autowired
-    private ManagedProperties appProps;	
+    private ManagedProperties appProps;
+    
+	@InjectLogger
+	private Logger logger;
 	
 	/**
 	 * Setup entity manager factory
