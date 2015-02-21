@@ -2,11 +2,11 @@
 
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 
-		<file>/Users/slenzi/Documents/programming/log/spring-config.log</file>
+		<file>/Users/slenzi/programming/log/spring-config.log</file>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- daily rollover -->
-			<fileNamePattern>/Users/slenzi/Documents/programming/log/spring-config.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>/Users/slenzi/programming/log/spring-config.%d{yyyy-MM-dd}.log</fileNamePattern>
 			<!-- keep 30 days' worth of history -->
 			<maxHistory>30</maxHistory>
 		</rollingPolicy>

@@ -33,6 +33,11 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    
+    <!-- De-register database drivers on shutdown to prevent memory leak. -->
+    <listener>
+    	<listener-class>org.lenzi.spring.sample.listener.DatabaseDriverCleanup</listener-class>
+    </listener>
 
     <!-- Declare a Spring MVC DispatcherServlet as usual -->
     <servlet>

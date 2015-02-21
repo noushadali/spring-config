@@ -1,7 +1,5 @@
 package org.lenzi.spring.sample.properties;
 
-import javax.inject.Inject;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
@@ -9,7 +7,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 /**
- * Global spring managed application properties for data transfer.
+ * Global spring managed application properties for our application
  *
  * @see oorg.lenzi.spring.sample.config.PropertyConfig
  * 
