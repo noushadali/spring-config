@@ -9,7 +9,7 @@ String message = (String)request.getAttribute("message");
 if(message != null){
 	out.println(message);
 }else{
-	out.println("No message found in request...");
+	out.println("No message found in request...Boo!");
 }
 %>
 
