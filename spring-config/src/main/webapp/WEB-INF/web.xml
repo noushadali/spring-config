@@ -68,13 +68,13 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-    <!-- map all requests for /spring/* to the dispatcher servlet -->
+    <!-- Map all requests for /spring/* to the dispatcher servlet -->
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/spring/*</url-pattern>
     </servlet-mapping>
     
-    <!-- map apache cxf servlet -->
+    <!-- Map Apache CXF Servlet -->
  	<servlet-mapping>
 		<servlet-name>cxf</servlet-name>
 		<url-pattern>/cxf/*</url-pattern>

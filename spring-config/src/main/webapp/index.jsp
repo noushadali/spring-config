@@ -20,7 +20,8 @@
 	</p>
 	
 	<p>
-		<a href="<%=request.getContextPath() %>/cxf/api/person/1">CXF JAX-RS + JPA Test. Fetch Person 1 from database.</a>
+		<a href="<%=request.getContextPath() %>/cxf/api/person/1">CXF JAX-RS + JPA Test. Fetch Person 1 from database.</a><br>
+		<a href="<%=request.getContextPath() %>/cxf/api/person/2">CXF JAX-RS + JPA Test. Fetch Person 2 from database.</a>
 	</p>
 
 </body>
