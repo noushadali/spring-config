@@ -58,11 +58,26 @@
             <param-value>org.lenzi.spring.sample.config.WebMvcConfig</param-value>
         </init-param>
     </servlet>
+    
+    <!-- Apache CXF Servlet setup -->
+	<servlet>
+		<description>Apache CXF Endpoint</description>
+		<display-name>cxf</display-name>
+		<servlet-name>cxf</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
     <!-- map all requests for /spring/* to the dispatcher servlet -->
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/spring/*</url-pattern>
     </servlet-mapping>
+    
+    <!-- map apache cxf servlet -->
+ 	<servlet-mapping>
+		<servlet-name>cxf</servlet-name>
+		<url-pattern>/cxf/*</url-pattern>
+	</servlet-mapping>
 	
 </web-app>

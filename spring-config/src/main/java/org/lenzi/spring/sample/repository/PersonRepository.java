@@ -45,9 +45,9 @@ public class PersonRepository extends AbstractRepository implements Serializable
 	 */
 	public Person getPersonById(int id){
 		
-		logger.debug("Fetching person by person id = " + id);
+		logger.info("Fetching person by person id = " + id);
 		
-		logger.debug("Getting entity manager.");
+		logger.info("Getting entity manager.");
 		//EntityManager pgEm = getEntityManager();
 		
 		CriteriaBuilder cb = entityManager.getCriteriaBuilder();
@@ -62,9 +62,9 @@ public class PersonRepository extends AbstractRepository implements Serializable
 		Person p = null;
 		try{
 			
-			logger.debug("Running query.");
+			logger.info("Running query.");
 			p = entityManager.createQuery(query).getSingleResult();
-			logger.debug("Query execution complete.");
+			logger.info("Query execution complete.");
 			
 		} catch (NoResultException e){
 			logger.error("Error querying person for person id " + id + ". " + e.getMessage());

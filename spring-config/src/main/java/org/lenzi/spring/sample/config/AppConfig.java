@@ -19,7 +19,7 @@ import org.springframework.stereotype.Controller;
 @ComponentScan(basePackages = "org.lenzi.spring.sample", excludeFilters = {
 		@ComponentScan.Filter(value = Controller.class, type = FilterType.ANNOTATION),
 		@ComponentScan.Filter(value = Configuration.class, type = FilterType.ANNOTATION) })
-@Import({ PropertyConfig.class, PersistenceConfig.class, UploadConfig.class })
+@Import({ PropertyConfig.class, PersistenceConfig.class, UploadConfig.class, CxfConfig.class })
 public class AppConfig {
 
 }

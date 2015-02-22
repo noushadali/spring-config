@@ -12,6 +12,11 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 @Configuration
 public class UploadConfig {
 
+	/**
+	 * Enable http multipart file upload from browser to server.
+	 * 
+	 * @return
+	 */
 	@Bean(name = "multipartResolver")
 	public CommonsMultipartResolver createMultipartResolver() {
 		

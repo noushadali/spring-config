@@ -4,9 +4,24 @@
 <html>
 <body>
 
-<p>
-	<a href="<%=request.getContextPath() %>/spring/test">Run MVC Test</a>
-</p>
+	<h2>Spring-config sample application.</h2>
+	
+	<p>
+	This application demonstrates how to use class-based annotation configuration to bootstrap
+	Spring, Spring MVC, JPA + Hibernate, and a Apache CXF JAX-RS service.  No beans.xml file! 
+	</p>
+
+	<p>
+		<a href="<%=request.getContextPath() %>/spring/test">Spring MVC Test</a>
+	</p>
+	
+	<p>
+		<a href="<%=request.getContextPath() %>/cxf/api/person">CXF JAX-RS Test</a>
+	</p>
+	
+	<p>
+		<a href="<%=request.getContextPath() %>/cxf/api/person/1">CXF JAX-RS + JPA Test. Fetch Person 1 from database.</a>
+	</p>
 
 </body>
 </html>

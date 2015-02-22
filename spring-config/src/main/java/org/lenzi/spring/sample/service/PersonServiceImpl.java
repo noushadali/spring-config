@@ -35,14 +35,14 @@ public class PersonServiceImpl implements PersonService, Serializable {
 	@Override
 	public Person getPersonById(int id) {
 		
-		logger.debug("Fetching person by id = " + id);
+		logger.info("Fetching person by id = " + id);
 		
 		//if(personRepository.haveEntityManager()){
 		//	logger.debug("Have entity manager = " + personRepository.haveEntityManager());
 		//	personRepository.debugEntityManager();
 		//}
 		
-		return personRepository.getPersonById(1);
+		return personRepository.getPersonById(id);
 	}
 
 }
