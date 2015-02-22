@@ -1,7 +1,11 @@
 package org.lenzi.spring.sample.config;
 
+import java.util.List;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.ResourceHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -37,4 +41,18 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/public/**").addResourceLocations("classpath:/public/");
 	}
 
+	/* (non-Javadoc)
+	 * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter#configureMessageConverters(java.util.List)
+	 */
+	@Override
+	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+		
+		//
+		// for pushing (uploading) files from a spring controller back to the clients browser.
+		//
+		converters.add(new ResourceHttpMessageConverter());
+		
+		super.configureMessageConverters(converters);
+	}
+	
 }
