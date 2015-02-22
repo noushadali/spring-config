@@ -19,6 +19,9 @@ See http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsin
 * Hibernate JPA
 * Hibernate JPA Metamodel generation
 
+##### JAX-RS Web Services
+* Apache CXF
+
 ##### Database:
 * PostgreSQL
 
