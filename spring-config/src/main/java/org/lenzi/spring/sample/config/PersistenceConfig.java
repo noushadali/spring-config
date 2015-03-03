@@ -59,10 +59,12 @@ public class PersistenceConfig {
 	/**
 	 * Fetch data source from JNDI.
 	 * 
+	 * set bean destroyMethod to empty string so close() is not called.
+	 * 
 	 * @return
 	 */
 	/*
-	@Bean
+	@Bean(destroyMethod="")
 	public DataSource getJndiDataSource() {
 		
 		DataSource dataSource = null;
@@ -83,6 +85,9 @@ public class PersistenceConfig {
 	 * Get DataSource for database.
 	 * 
 	 * See src/main/resources/my.application.properties for database connection details.
+	 * 
+	 * set bean destroyMethod to empty string so close() is not called.
+	 * @Bean(destroyMethod="")
 	 * 
 	 * @return
 	 */
